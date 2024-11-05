@@ -1,0 +1,80 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+}
+
+.logo-background, .content {
+    width: 70vw;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0006;
+    position: relative;
+    top: 30vh;
+}
+
+.logo-background {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    width: 40vw;
+}
+
+.content {
+    background-color: white;
+}
+
+.logo img{
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    color: white;
+}
+
+.logo-background > p {
+    font-size: 10px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.credit {
+    text-decoration: none;
+    color: white
+}
+
+.credit:hover {
+    color: blue;
+}
+
+
