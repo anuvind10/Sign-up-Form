@@ -7,12 +7,50 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('fonts/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('fonts/sourcecodepro-regular-webfont.woff2') format('woff2'),
+         url('fonts/sourcecodepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     line-height: 1.5;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+p {
+    font-family: 'source_code_proregular';
+    font-weight: bold;
+}
+
+label {
+    font-family: 'quicksandregular';
+    font-size: 8px;
+    font-weight: bold;
 }
 
 .main {
@@ -47,16 +85,13 @@ body {
     width: 40vw;
 }
 
-.content {
-    background-color: white;
-}
-
 .logo img{
     width: 50px;
     height: auto;
 }
 
 .logo h1 {
+    font-family: 'kaushan_scriptregular';
     color: white;
 }
 
@@ -74,7 +109,63 @@ body {
 }
 
 .credit:hover {
-    color: blue;
+    color: #53dbc7;
+}
+
+.content {
+    max-height: 100vh;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form > div{
+    height: 180px;
+    padding-left: 30px;
+}
+
+.form-header {
+    padding-top: 20px;
+}
+
+.form-fields {
+    background-color: white;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-button {
+    margin-top: 50px
+}
+
+button {
+    margin-bottom: 20px;
+}
+
+button p {
+    font-size: 8px;
+    font-weight: 100;
+}
+
+.login {
+    text-decoration: none;
+    color: #53dbc7;
 }
 
 
