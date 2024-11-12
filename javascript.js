@@ -38,7 +38,7 @@ function toggleWarningActive() {
         }
     }
     else {
-        if (!this.checkValidity()) {
+        if (!this.checkValidity() && this.value !== '') {
             if (this.id === 'email')
                 emailCheck.classList.add('warning-active');
             else if (this.id === 'phone')
