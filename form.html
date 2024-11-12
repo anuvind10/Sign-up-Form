@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="javascript.js"></script>
     <title>Sign Up!</title>
@@ -20,7 +23,7 @@
             </p>
         </div>
         <div class="content">
-            <form action="">
+            <form action="#" method="get">
                 <div class="form-header">
                     <p>This is not a real online service!
                     You know you need something like this in your life to
@@ -32,34 +35,41 @@
                     <p>Let's do this!</p>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="first-name">FIRST NAME</label>
-                            <input type="text" id="first-name" name="first-name">
+                            <label for="first-name">*FIRST NAME</label>
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-column">
-                            <label for="last-name">LAST NAME</label>
-                            <input type="text" id="last-name" name="last-name">
+                            <label for="last-name">*LAST NAME</label>
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email">
+                            <label for="email">*EMAIL</label>
+                            <input type="email" id="email" placeholder="joe@example.com" 
+                                pattern="^(\D)+(\w)*((\.(\w)+)?)+@(\D)+(\w)*((\.(\D)+(\w)*)+)?(\.)[a-z]{2,}$"
+                                required >
+                            <p id="emailCheck" class="help-text">Please enter a valid email address.</p>
                         </div>
                         <div class="form-column">
                             <label for="phone">PHONE</label>
-                            <input type="tel" id="phone" pattern="[7-9]{1}[0-9]{9}">
+                            <input type="tel" id="phone" 
+                                   pattern="[7-9]{1}[0-9]{9}" 
+                                   placeholder="9452718504">
+                            <p id="phoneCheck" class="help-text">Please enter a valid phone number</p>
                         </div>                    
                     </div>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="pwd">PASSWORD</label>
-                            <input type="password" id="pwd">
-                            <p id="passCheck">* Passwords do not match</p>
+                            <label for="pwd">*PASSWORD</label>
+                            <input type="password" id="pwd" required>
+                            <p id="passCheck" class="help-text">Passwords do not match</p>
                         </div>
                         <div class="form-column">
-                            <label for="pwd-cnf">CONFIRM PASSWORD</label>
-                            <input type="password" id="cnf-pwd">
-                            <p id="passCheck">* Passwords do not match</p>
+                            <label for="pwd-cnf">*CONFIRM PASSWORD</label>
+                            <input type="password" id="cnf-pwd" required>
+                            <p id="passCheck" class="help-text">Passwords do not match</p>
+                            <p id="passMatch">Password Matches!</p>
                         </div>
                     </div>
                 </div>
@@ -67,9 +77,12 @@
                     <button type="submit">Create Account</button>
                     <p>Already have an account? <a class="login" href="">Log in</a></p>
                 </div>
+                <div>
+                    <p id="copyright">Copyright © <script>document.write(new Date().getFullYear())</script> 
+                        <a href="https://github.com/anuvind10" target="_blank">anuvind10</a></p>
+                </div>
             </form>
-        </div>      
-    </div>
-    
+        </div>
+        </div>
 </body>
 </html>
